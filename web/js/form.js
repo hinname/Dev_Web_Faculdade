@@ -3,7 +3,9 @@ function outputCheckbox () {
   var inputGameArr = Array.from(inputGame);
   //console.log(inputGame);
   console.log(inputGameArr);
-  //soma = 0;
+
+  soma = 0;
+
   s = 0;
 
   s = inputGameArr.length * 10;
@@ -19,6 +21,6 @@ function outputCheckbox () {
   //document.getElementById('result').innerHTML = soma;
   //console.log(soma);
 
-  return s;
+  return soma;
 
 }
