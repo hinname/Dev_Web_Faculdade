@@ -11,9 +11,16 @@ body {
       padding:0;
       font-family: 'Roboto', sans-serif;
 }
+/*
+.input {
+      margin-top: 10px;
+      margin-bottom: 20px;
+}
+*/
 
 .background {
       width: 100%;
+      padding: 15px 45px 15px 20px;
 }
 
 .content {
@@ -23,11 +30,18 @@ body {
 }
 
 input[type=text], input[type=email], input[type=date], input[type=tel]{
-      margin-bottom: 25px;
-      margin-top: 10px;
+      margin-bottom: 15px;
+      margin-top: 15px;
       width:100%;
       padding: 15px;
 
+}
+
+input[type=number] {
+      margin-bottom: 15px;
+      margin-top: 15px;
+      width:40%;
+      padding: 15px;
 }
 
 input[type=radio] {

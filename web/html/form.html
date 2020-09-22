@@ -26,13 +26,13 @@
                                           required autofocus>
                                     </div>
                                     <div class="input">
-                                          Gênero: 
+                                          Sexo: 
                                                 <input type="radio" id="gender" name="gender" value="Masculino"> Masculino
                                                 <input type="radio" id="gender" name="gender" value="Feminino"> Feminino 
                                     </div>
                                     <div class="input">
                                           <label for="User"> Data nascimento* : </label>
-                                          <input type="date" id="datenasc" name="datenasc" required/>
+                                          <input type="date" id="datenasc" name="datenasc" required autofocus/>
                                     </div>
                                     <div class="input">
                                           <label for="user"> E-mail* : </label>
@@ -40,7 +40,7 @@
                                     </div>
                                     <div class="input">
                                           <label for="contact"> Telefone: </label>
-                                          <input type="tel" id="telefone" name="telefone" pattern="[0-9]{2}[0-9]{5}[0-9]{4}" placeholder="(DDD)00000 0000" >
+                                          <input type="tel" id="telefone" name="telefone" pattern="[0-9]{2}[0-9]{5}[0-9]{4}" placeholder="Ex:044123456789" >
                                     </div>
                                     <div class="input">
                                           Selecione os jogos que deseja participar (10 reais para cada jogo)* : <br><br>
@@ -49,8 +49,14 @@
                                                 <input type="checkbox" id="gameselect" class="gameselect" name="gameselect" value="10" > Dota II
                                                 <input type="checkbox" id="gameselect" class="gameselect" name="gameselect" value="10" > Valorant
                                     </div>
+
                                     <div class="input">
-                                          O que você espera desse projeto?
+                                          Quantos dias na semana você está disponível para campeonatos? (mínimo 1, máximo 7 dias)
+                                          <input type="number" name="weekdays" id="weekdays" min="1" max="7">
+                                    </div>
+
+                                    <div class="input">
+                                          O que você espera desse evento?
                                           <textarea name="expectations" id="expectations" cols="20" rows="5"></textarea>
                                     </div>
 
@@ -70,7 +76,6 @@
       <footer>
             Versão alpha
       </footer>
-      
       
 </body>
 </html>
