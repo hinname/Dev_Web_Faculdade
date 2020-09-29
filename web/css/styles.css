@@ -15,9 +15,28 @@ body {
 .input {
       margin-top: 10px;
       margin-bottom: 20px;
+      button
+       transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 */
-
+.btnSubmit {
+      display: inline-block;
+      font-weight: 400;
+      text-align: center;
+      vertical-align: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      color: #fff;
+      background-color: #28a745;
+      border-color: #28a745;
+      border: 1px solid;
+      padding: 15px 25px;
+      font-size: 1rem;
+      line-height: 1.5;
+      border-radius: 0.25rem;
+}
 .background {
       width: 100%;
       padding: 15px 45px 15px 20px;
