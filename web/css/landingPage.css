@@ -68,7 +68,7 @@ header img {
 
 .view {
       display: flex;
-      margin: 32px 64px;
+      margin: 32px 64px 64px;
 }
 
 .view-text {
@@ -95,4 +95,42 @@ header img {
       margin-left: 64px;
       border-radius: 5%;
       
+}
+
+.info {
+      margin-top: 64px;
+}
+
+.info h2 {
+      margin-top: 128px;
+      text-align: center;
+      font-size: 32px;
+}
+
+.games {
+      list-style:none;
+      margin: 128px;
+}
+
+.game {
+      margin: 128px 0px;
+}
+
+.gametitle {
+      font-size: 32px;
+}
+
+.game-data {
+      display: flex;
+      
+}
+
+.game-data img{
+      margin-left: auto;
+      padding-right: 32px;
+      width: auto;
+}
+
+.game-data p {
+      margin-left: 12px;
 }
