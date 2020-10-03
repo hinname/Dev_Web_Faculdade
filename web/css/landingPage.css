@@ -90,6 +90,10 @@ header img {
       text-transform: uppercase;
       border-radius: 5%;
 }
+.view-link:hover {
+      background-color: #a23a1b;
+      color: #b8b8b8;
+}
 
 .view-img img {
       margin-left: 64px;
