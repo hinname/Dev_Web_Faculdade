@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
 
 body {
@@ -15,6 +16,8 @@ header {
       display: flex;
       margin: 16px;
       margin-top: 24px;
+      border: 1px solid #333;
+      border-radius: 2px;
 }
 
 
@@ -24,7 +27,7 @@ header .navbar-brand a {
       float: left;
       color: #f2f2f2;
       text-align: center;
-      padding: 14px 16px;
+      padding: 15px 16px;
       text-decoration: none;
       font-size: 17px;
 }
@@ -56,9 +59,40 @@ header a.active {
 
 header img {
       padding: 12px;
-      padding-bottom: 6px;
+      padding-bottom: 7px;
       height: 32px;
       width: 48px;
       background-color: #ba401b;
       margin-bottom: 0;
+}
+
+.view {
+      display: flex;
+      margin: 32px 64px;
+}
+
+.view-text {
+      font-size: 32px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 800;
+      line-break: loose;
+}
+
+.view-text p {
+      margin-bottom: 128px;
+}
+
+.view-link {
+      background-color: #ba401b;
+      color: white;
+      padding: 1em 1.5em;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-radius: 5%;
+}
+
+.view-img img {
+      margin-left: 64px;
+      border-radius: 5%;
+      
 }
