@@ -132,9 +132,14 @@ header img {
 .game-data img{
       margin-left: auto;
       padding-right: 32px;
+      padding-left: 46px;
       width: auto;
 }
 
 .game-data p {
       margin-left: 12px;
+}
+
+.description {
+      font-size: 15pt;
 }
