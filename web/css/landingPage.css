@@ -9,6 +9,9 @@ body {
       background-color: black;
       color: white;
 }
+.interface {
+      width: 100%;
+}
 
 header {
       background-color: #333;
@@ -20,7 +23,9 @@ header {
       border-radius: 2px;
 }
 
-
+header.navbar-brand {
+      display: flex;
+}
     /* Style the links inside the navigation bar */
 header .navbar-brand a {
 
@@ -31,10 +36,12 @@ header .navbar-brand a {
       text-decoration: none;
       font-size: 17px;
 }
+
 header .navbar-options {
       display: flex;
 }
 header .nav-link {
+      width: 100%;
       list-style:none;
       padding: 0 12px;
       float: left;
@@ -96,6 +103,8 @@ header img {
 }
 
 .view-img img {
+      max-width: 100%;
+      height: auto;
       margin-left: 64px;
       border-radius: 5%;
       
@@ -103,6 +112,7 @@ header img {
 
 .info {
       margin-top: 64px;
+      width:100%;
 }
 
 .info h2 {
@@ -146,4 +156,49 @@ header img {
 .informacao li {
       margin: 24px;
       font-size: 15pt;
+}
+
+.info-headers {
+      margin-left: 16px;
+}
+
+
+@media only screen and (max-width:940px) {
+      .view-link {
+            font-size: 3vw;
+      }
+      .games {
+            justify-content: center;
+            margin-left: 12px;
+      }
+      .gametitle {
+            margin-left: 12px;
+            text-align: center;
+      }
+      .game-data {
+            display: grid;
+            text-align: left;
+      }
+      .game-data img {
+            padding: 0%;
+      }
+      .view {
+            display: grid;
+            margin: 21px;
+            
+      }
+
+      .view-img img {
+            max-width: 100%;
+            height: auto;
+            margin-left: 0%;
+            margin-top: 64px;
+            border-radius: 5%;
+            
+      }
+
+      .info-headers {
+            text-align: center;
+      }
+
 }
