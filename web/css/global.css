@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+
+body {
+      margin:0;
+      padding:0;
+      font-family: 'Roboto', sans-serif;
+      background-color: black;
+      color: white;
+}
+.interface {
+      width: 100%;
+}
+
+header {
+      background-color: #333;
+      overflow: hidden;
+      display: flex;
+      margin: 16px;
+      margin-top: 24px;
+      border: 1px solid #333;
+      border-radius: 2px;
+}
+
+header.navbar-brand {
+      display: flex;
+}
+    /* Style the links inside the navigation bar */
+header .navbar-brand a {
+
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 15px 16px;
+      text-decoration: none;
+      font-size: 17px;
+}
+
+header .navbar-options {
+      display: flex;
+}
+header .nav-link {
+      width: 100%;
+      list-style:none;
+      padding: 0 12px;
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      text-decoration: none;
+      font-size: 17px;
+      transition: 0.3s;
+}
+
+    /* Change the color of links on hover */
+header a:hover {
+      color: #b8b8b8;
+}
+
+    /* Add a color to the active/current link */
+header a.active {
+      background-color: #ba401b;
+      color: white;
+      padding-bottom: 16px;
+}
+
+header img {
+      padding: 12px;
+      padding-bottom: 7px;
+      height: 32px;
+      width: 48px;
+      background-color: #ba401b;
+      margin-bottom: 0;
+}
