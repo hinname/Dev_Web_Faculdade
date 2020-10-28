@@ -25,7 +25,7 @@ h1 {
       color: #fff;
       background-color: #28a745;
       border-color: #28a745;
-      border: 1px solid;
+      border: 1px solid #28a745;
       padding: 15px 25px;
       font-size: 1rem;
       line-height: 1.5;
@@ -41,24 +41,30 @@ h1 {
       margin: 10px 30% 10px 20%;
       padding:10px 0;
 }
+input {
+      border: 1px solid rgb(0, 0, 0);
+      border-radius: 4px;
+      background-color: #434343;
+      color: white;
+}
 
 input[type=text], input[type=email], input[type=date], input[type=tel]{
-      margin-bottom: 15px;
-      margin-top: 15px;
+      margin-bottom: 20px;
+      margin-top: 20px;
       width:100%;
       padding: 15px;
 
 }
 
 input[type=number] {
-      margin-bottom: 15px;
-      margin-top: 15px;
+      margin-bottom: 20px;
+      margin-top: 20px;
       width:40%;
       padding: 15px;
 }
 
 input[type=radio] {
-      margin: 15px;
+      margin: 20px;
       margin-bottom: 30px;
 }
 
@@ -66,17 +72,14 @@ input[type=checkbox] {
       margin-bottom: 32px;
 }
 
-
-textarea{
-      width:90%;
-      padding: 15px;
-      margin-top: 10px;
-      border:1px solid;
-      border-radius:5px;
-      margin-bottom: 20px;
-      resize:none;
+.input span {
+      font-size: 24px;
 }
 
+.input-check {
+      margin-top: 18px;
+      margin-bottom: 20px;
+}
 
 
 .btnSubmit {
