@@ -1,9 +1,8 @@
 
 h1 {
-      width: 100%;
-      align-items: center;
-      
+      text-align: center;
 }
+
 
 /*
 .input {
@@ -34,6 +33,7 @@ h1 {
 .background {
       width: 100%;
       padding: 15px 45px 15px 20px;
+      margin-bottom: 50px;
 }
 
 .content {
@@ -48,6 +48,7 @@ input {
       color: white;
 }
 
+
 input[type=text], input[type=email], input[type=date], input[type=tel]{
       margin-bottom: 20px;
       margin-top: 20px;
@@ -56,30 +57,15 @@ input[type=text], input[type=email], input[type=date], input[type=tel]{
 
 }
 
-input[type=number] {
-      margin-bottom: 20px;
-      margin-top: 20px;
-      width:40%;
-      padding: 15px;
-}
 
 input[type=radio] {
       margin: 20px;
-      margin-bottom: 30px;
-}
-
-input[type=checkbox] {
-      margin-bottom: 32px;
-}
-
-.input span {
-      font-size: 24px;
-}
-
-.input-check {
-      margin-top: 18px;
       margin-bottom: 20px;
+      margin-left: 12px;
+      margin-right:12px;
 }
+
+
 
 
 .btnSubmit {
@@ -95,6 +81,7 @@ footer {
 }
 
 .info {
+      display:grid;
       margin-top: 36px;
       font-size: small;
 }
@@ -104,6 +91,8 @@ button {
       text-align: center;
       font-size: 16px;
 }
+
+
 
 /*
 form{

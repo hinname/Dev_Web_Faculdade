@@ -1,0 +1,33 @@
+
+.input {
+      margin-top: 40px;
+}
+
+
+
+.content a {
+      border: 1px solid #ba401b;
+      padding: 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      margin-top: 15px;
+}
+
+.content a:link {
+      color: #ba401b;
+      text-decoration: none;
+}
+
+.content a:visited {
+      color: #ba401b;
+      text-decoration: none;
+}
+
+.content a:hover {
+      color: #9b3718;
+      text-decoration: underline;
+}
+
+.content a:active {
+      text-decoration: underline;
+}

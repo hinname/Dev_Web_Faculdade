@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../css/global.css">
+      <link type="text/css" rel="stylesheet" href="../css/formGlobal.css">
+      <link type="text/css" rel="stylesheet" href="../css/formPagame.css">
+      <title>Cadastro usuário</title>
+</head>
+<body>
+      <script src="../js/form.js"></script>
+            <div class="interface">
+                  <header>
+                        <div class="navbar-brand">
+                              <a class="active" href="landingPage.html">Torneio de Games</a>
+                              <img src="../assets/logo.png" width="200">
+                        </div>
+                        <ul class="navbar-options">
+                              <li class="nav-link">
+                                    <a class="nav-link" href="../html/landingPage.html">Home </a>
+                              </li>
+                              <li class="nav-link">
+                                    <a class="nav-link" href="formUser.html">Cadastre-se</a>
+                              </li>
+                        </ul>
+                        
+                  </header>
+
+                  <div class="content">
+                        <div class="view-text">
+                              <h1>Pagamento Inscrição</h1>
+                              
+                        </div>
+                        
+                        <form id="cadastro" action="mailto:heriveltonPRo@gmail.com" method="post" onchange="outputCheckbox()">
+                              <fieldset class="background">
+                                    
+                                    <div class="fields">
+                                          
+                                          <div class="formaDePag">
+                                                <div class="input">
+                                                      Forma de pagamento: 
+                                                            <input type="radio" id="gender" name="gender" value="Masculino" checked> Cartão de crédito
+                                                            <input type="radio" id="gender" name="gender" value="Feminino"> Boleto 
+                                                </div>
+                                          </div>
+                                          
+                                          <div class="credit">
+                                                <div class="input">
+                                                      <label for="name">Número do cartão (apenas números) : </label>
+                                                      <input 
+                                                            type="text" 
+                                                            id="name" 
+                                                            name="name"  
+                                                            maxlength="16" 
+                                                            required autofocus>
+                                                </div>
+                                                <div class="input">
+                                                      <label for="name">Nome impresso no cartão : </label>
+                                                      <input 
+                                                            type="text" 
+                                                            id="nameCard" 
+                                                            name="nameCard"  
+                                                            maxlength="100" 
+                                                            required autofocus>
+                                                </div>
+                                                <div class="input">
+                                                      <label for="datvenc"> Validade : </label>
+                                                      <input type="date" id="datvenc" name="datvenc" required autofocus/>
+                                                </div>
+                                                <div class="input">
+                                                      <label for="name"> Cód. de segurança (apenas números) : </label>
+                                                      <input 
+                                                            type="text" 
+                                                            id="codSeg" 
+                                                            name="codSeg" 
+                                                            maxlength="3" 
+                                                            required autofocus>
+                                                </div>
+                                          </div>
+                                                      <center><button class="btnSubmit" type="submit">Confirmar</button></center>
+                                          
+                                    </div>
+
+                                    
+                              </fieldset>
+                        </form>
+                        
+                  </div>
+                  
+            </div>
+            
+      <footer>
+            Versão alpha
+      </footer>
+      
+</body>
+</html>

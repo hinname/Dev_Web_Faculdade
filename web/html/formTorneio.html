@@ -4,8 +4,9 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="../css/global.css">
-      <link type="text/css" rel="stylesheet" href="../css/form.css">
-      <title>Cadastro games</title>
+      <link type="text/css" rel="stylesheet" href="../css/formGlobal.css">
+      <link type="text/css" rel="stylesheet" href="../css/formTorneio.css">
+      <title>Cadastro torneios</title>
 </head>
 <body>
       <script src="../js/form.js"></script>
@@ -28,54 +29,32 @@
 
                   <div class="content">
                         <div class="view-text">
-                              <h1>Cadastro Pessoal</h1>
+                              <h1>Inscrição Torneio</h1>
                         </div>
                         
                         <form id="cadastro" action="mailto:heriveltonPRo@gmail.com" method="post" onchange="outputCheckbox()">
                               <fieldset class="background">
                                     
                                     <div class="fields">
-                                          
+                                          Selecione o jogo que deseja participar (10 Reais) *: <br><br>
                                           <div class="input">
-                                                <label for="Name">Nome* : </label>
-                                          <input 
-                                                type="text" 
-                                                id="name" 
-                                                name="name" 
-                                                placeholder="Nome Completo" 
-                                                maxlength="100" 
-                                                required autofocus>
-                                          </div>
-                                          <div class="input">
-                                                Sexo* : 
-                                                      <input type="radio" id="gender" name="gender" value="Masculino" checked> Masculino
-                                                      <input type="radio" id="gender" name="gender" value="Feminino"> Feminino 
-                                          </div>
-                                          <div class="input">
-                                                <label for="User"> Data nascimento* : </label>
-                                                <input type="date" id="datenasc" name="datenasc" required autofocus/>
-                                          </div>
-                                          <div class="input">
-                                                <label for="user"> E-mail* : </label>
-                                                <input type="email" id="email" name="email" required autofocus placeholder="Nome@email.com">
-                                          </div>
-                                          <div class="input">
-                                                <label for="contact"> Telefone: </label>
-                                                <input type="tel" id="telefone" name="telefone" pattern="[0-9]{2}[0-9]{5}[0-9]{4}" placeholder="Ex:044123456789" >
-                                          </div>
-                                          <div class="input">
-                                                Selecione o jogo que deseja participar (10 Reais) *: <br><br>
+                                                
+                                                      <label for="gamerad1">League of Legends</label>
                                                       <input type="radio" id="gamerad1" name="gamerad" class="radiogame" value="10" checked >
-                                                            <label for="gamerad1">League of Legends</label>
+
+                                                      <label for="gamerad2">Counter-Strike</label>
                                                       <input type="radio" id="gamerad2" name="gamerad" class="radiogame" value="10" >
-                                                            <label for="gamerad2">Counter-Strike</label>
-                                                      <input type="radio" id="gamerad3" name="gamerad" class="radiogame" value="10" > 
-                                                            <label for="gamerad3">Dota II</label>
+
+                                                      <label for="gamerad3">Dota II</label>
+                                                      <input type="radio" id="gamerad3" name="gamerad" class="radiogame" value="10" >
+                                                      
+                                                      <label for="gamerad4">Valorant</label>
                                                       <input type="radio" id="gamerad4" name="gamerad" class="radiogame" value="10" > 
-                                                            <label for="gamerad4">Valorant</label>
+                                                            
                                           </div>
                                           <div class="input-check">
                                                 (OPCIONAL) Você pode participar de torneios de outros jogos. Quais jogos deseja participar (além do já selecionado anteriormente)? <br><br>
+                                                
                                                       <input type="checkbox" id="checkboxlol" class="gameselect" name="lol" value="10">
                                                             <label for="checkboxlol">League of Legends</label>
                                                       <input type="checkbox" id="checkboxcs" class="gameselect" name="cs" value="10">
@@ -86,10 +65,6 @@
                                                             <label for="checkboxvalorant">Valorant</label>
                                           </div>
       
-                                          <div class="input">
-                                                Quantos dias na semana você está disponível para campeonatos? (mínimo 1, máximo 7 dias)
-                                                <input type="number" name="weekdays" id="weekdays" min="1" max="7">
-                                          </div>
       
                                           <div class="input">
                                                 <span><p id="valfinal">Valor: R$ 10 </p></span> 
