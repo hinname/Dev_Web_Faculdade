@@ -9,7 +9,7 @@
       <title>Cadastro usuário</title>
 </head>
 <body>
-      <script src="../js/form.js"></script>
+      <script src="../js/formPagame.js"></script>
             <div class="interface">
                   <header>
                         <div class="navbar-brand">
@@ -33,7 +33,7 @@
                               
                         </div>
                         
-                        <form id="cadastro" action="mailto:heriveltonPRo@gmail.com" method="post" onchange="outputCheckbox()">
+                        <form id="cadastro" action="mailto:heriveltonPRo@gmail.com" method="post" onchange="inputChange()">
                               <fieldset class="background">
                                     
                                     <div class="fields">
@@ -41,18 +41,18 @@
                                           <div class="formaDePag">
                                                 <div class="input">
                                                       Forma de pagamento: 
-                                                            <input type="radio" id="gender" name="gender" value="Masculino" checked> Cartão de crédito
-                                                            <input type="radio" id="gender" name="gender" value="Feminino"> Boleto 
+                                                            <input type="radio" id="formPagam1" name="formPagam" value="cartaoCredito" checked> Cartão de crédito
+                                                            <input type="radio" id="formPagam2" name="formPagam" value="boleto"> Boleto 
                                                 </div>
                                           </div>
                                           
-                                          <div class="credit">
+                                          <div id="credit" class="credit">
                                                 <div class="input">
                                                       <label for="name">Número do cartão (apenas números) : </label>
                                                       <input 
                                                             type="text" 
-                                                            id="name" 
-                                                            name="name"  
+                                                            id="numCard" 
+                                                            name="numCard"  
                                                             maxlength="16" 
                                                             required autofocus>
                                                 </div>
