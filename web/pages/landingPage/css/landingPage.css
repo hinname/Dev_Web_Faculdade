@@ -1,0 +1,131 @@
+
+
+.view {
+      display: flex;
+      margin: 32px 64px 64px;
+}
+
+.view-text {
+      font-size: 32px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 800;
+      line-break: loose;
+}
+
+.view-text p {
+      margin-bottom: 128px;
+}
+
+.view-link {
+      background-color: #ba401b;
+      color: white;
+      padding: 1em 1.5em;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-radius: 5%;
+}
+.view-link:hover {
+      background-color: #a23a1b;
+      color: #b8b8b8;
+}
+
+.view-img img {
+      max-width: 100%;
+      height: auto;
+      margin-left: 64px;
+      border-radius: 5%;
+      
+}
+
+.info {
+      margin-top: 64px;
+      width:100%;
+}
+
+.info h2 {
+      margin-top: 128px;
+      text-align: center;
+      font-size: 32px;
+}
+
+.games {
+      list-style:none;
+      margin: 128px;
+}
+
+.game {
+      margin: 128px 0px;
+}
+
+.gametitle {
+      font-size: 32px;
+}
+
+.game-data {
+      display: flex;
+      
+}
+
+.game-data img{
+      margin-left: auto;
+      padding-right: 32px;
+      padding-left: 46px;
+      width: auto;
+}
+
+.game-data p {
+      margin-left: 12px;
+}
+
+.description {
+      font-size: 15pt;
+}
+.informacao li {
+      margin: 24px;
+      font-size: 15pt;
+}
+
+.info-headers {
+      margin-left: 16px;
+}
+
+
+@media only screen and (max-width:940px) {
+      .view-link {
+            font-size: 3vw;
+      }
+      .games {
+            justify-content: center;
+            margin-left: 12px;
+      }
+      .gametitle {
+            margin-left: 12px;
+            text-align: center;
+      }
+      .game-data {
+            display: grid;
+            text-align: left;
+      }
+      .game-data img {
+            padding: 0%;
+      }
+      .view {
+            display: grid;
+            margin: 21px;
+            
+      }
+
+      .view-img img {
+            max-width: 100%;
+            height: auto;
+            margin-left: 0%;
+            margin-top: 64px;
+            border-radius: 5%;
+            
+      }
+
+      .info-headers {
+            text-align: center;
+      }
+
+}

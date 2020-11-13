@@ -1,0 +1,50 @@
+body { background-color:#000000;
+	font-family: sans-serif;
+}
+
+.form { width: 400px;
+      margin: auto;
+		padding-top: 50px;
+}
+
+.card { box-shadow: 1px 1px 5px #fff;
+		padding: 30px;
+		border-radius: 5px;
+		background-color: #fff;
+      
+}
+
+.card-info{
+	margin-bottom: 10px;
+}
+
+.card-info >button {
+	background-color: #ba401b;
+	width: 100%;
+	border-radius: 50px;
+	padding: 15px;
+	color: #fff;
+	border: 0px;
+	outline: 0;
+	
+}
+
+.card-topo{ text-align: center;
+			color: #ba401b;
+	
+}
+
+.card-info >label{	 
+	width: 100%;
+	color: #000000;
+	display: block;
+			
+}
+
+.card-info >input {
+	border-radius: 5px;
+	outline: o;
+	width: 100%;
+	height: 30px;
+	padding: 5px;
+} 
