@@ -7,10 +7,10 @@ body { background-color:#000000;
 		padding-top: 50px;
 }
 
-.card { box-shadow: 1px 1px 5px #fff;
+.card { box-shadow: 1px 1px 5px #434343;
 		padding: 30px;
 		border-radius: 5px;
-		background-color: #fff;
+		background-color: #434343;
       
 }
 
