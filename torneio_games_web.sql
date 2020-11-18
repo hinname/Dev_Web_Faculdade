@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 17-Nov-2020 às 22:11
+-- Tempo de geração: 18-Nov-2020 às 18:28
 -- Versão do servidor: 10.4.14-MariaDB
 -- versão do PHP: 7.3.23
 
@@ -33,7 +33,7 @@ CREATE TABLE `confrontos` (
   `posicao` int(11) NOT NULL,
   `data_hora` datetime NOT NULL,
   `id_torneio` int(11) NOT NULL,
-  `id_user_winner` int(11) NOT NULL
+  `id_user_winner` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
