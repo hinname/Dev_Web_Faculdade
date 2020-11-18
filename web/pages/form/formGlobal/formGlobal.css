@@ -49,7 +49,9 @@ input {
 }
 
 
-input[type=text], input[type=email], input[type=date], input[type=tel]{
+
+
+input[type=text], input[type=email], input[type=date], input[type=tel], input[type=password]  {
       margin-bottom: 20px;
       margin-top: 20px;
       width:100%;
@@ -58,13 +60,13 @@ input[type=text], input[type=email], input[type=date], input[type=tel]{
 }
 
 
+
 input[type=radio] {
       margin: 20px;
       margin-bottom: 20px;
       margin-left: 12px;
       margin-right:12px;
 }
-
 
 
 
