@@ -20,5 +20,18 @@
       Clique aqui para voltar para inicio
       </a>
       </center>
+
+      <center><a 
+      href="../../web/pages/form/ormTorneio/html/index.html" 
+      style="background-color: #ba401b;
+      color: white;
+      padding: 1em 1.5em;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-radius: 5%;"
+      >
+      Clique aqui inscrever-se em um torneio
+      </a>
+      </center>
 </body>
 </html>
