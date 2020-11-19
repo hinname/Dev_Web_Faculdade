@@ -1,13 +1,16 @@
 function isValidForm() {
 
-  validateDate();
-  validatePass();
+  var validateDate = validateDate();
+  var validatePass = validatePass();
 
-  if (!validadeDate() && !validatePass()) {
-    return false
+  if (validateDate === false || validatePass === false) {
+    window.alert("Validação falha")
+    //window.history.back();
+    return(false);
   }
 
-  return true
+
+  return(true)
 }
 
 function validateDate() {
@@ -16,18 +19,27 @@ function validateDate() {
   var dateNow = new Date()
   if(dateNow.getFullYear() - date2.getFullYear() < 14){
     window.alert('Idade mínima é 14 anos');
-    return false
+    return(false)
     }
     else if (dateNow.getFullYear() - date2.getFullYear() > 100) {
       window.alert('Digite uma idade valida!');
-      return false
+      return(false)
     }
     else{
-      return true
+      return(true)
     }
 
 }
 
 function validatePass() {
+  var password = document.getElementById("senha1");
+  var cpassword = document.getElementById("senha2");
 
+  if (password.value != cpassword.value) {
+    window.alert("Sua senha e confirmação de senha estão diferentes")
+    cpassword.focus();
+    return (false)
+  }
+
+  return (true)
 }
