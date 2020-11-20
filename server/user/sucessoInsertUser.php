@@ -30,7 +30,7 @@ if (!$logged) die('Sai daqui!');
       </center>
 
       <center><a 
-      href="../../web/pages/form/ormTorneio/html/index.html" 
+      href="../../web/pages/form/formTorneio/html/index.html" 
       style="background-color: #ba401b;
       color: white;
       padding: 1em 1.5em;

@@ -23,6 +23,7 @@ $resultadoF = count($resultado);
 if ($resultadoF == 1) {
       
       $_SESSION['logged'] = true;
+      $_SESSION['id'] = $resultado[0]['id'];
       $_SESSION['nome'] = $resultado[0]['nome'];
 
       header('location: ../../web/pages/crud/home/html/index.html');
