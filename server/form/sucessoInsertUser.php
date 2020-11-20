@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+$logged = $_SESSION['logged'] ?? NULL;
+
+if (!$logged) die('Sai daqui!');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -17,7 +25,7 @@
       text-transform: uppercase;
       border-radius: 5%;"
       >
-      Clique aqui para voltar para inicio
+      Clique aqui para voltar para inicio (Você será deslogado)
       </a>
       </center>
 

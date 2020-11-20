@@ -1,3 +1,26 @@
+
+var autoriza = abrirConexao();
+
+var url = '../../../../../server/suporte/autorizaLogin.php';
+
+autoriza.open("GET", url, true);
+
+autoriza.send();
+
+autoriza.onreadystatechange = function() {
+  if(autoriza.readyState == 4 && autoriza.status == 200) {
+    var resposta = autoriza.responseText;
+
+    if (resposta == 'não autorizado') {
+      document.body.style.display = "none";
+      window.alert("Você não tem autorização para acessar essa página, faça login!");
+      window.location.replace("http://localhost/Dev_Web_Faculdade/web/pages/login/loginSuporte/html/");
+    }
+    
+  }
+}
+
+
 function getNome() {
   if(window.XMLHttpRequest) {
     req = new XMLHttpRequest();

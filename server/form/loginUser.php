@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+$_SESSION['logged'] = false;
 
 if(!defined('PDO::ATTR_DRIVER_NAME')) {
       echo "PDO não está disponivel. Ative no php.ini";
@@ -14,16 +16,19 @@ $query = $pdo->prepare("SELECT * FROM usuarios WHERE email='$email' && senha='$s
 $query->execute();
 $resultado = $query->fetchAll();
 
-$resultado = count($resultado);
 
-if ($resultado == 1) {
-      session_start();
+
+$resultadoF = count($resultado);
+
+if ($resultadoF == 1) {
+      
       $_SESSION['logged'] = true;
-      $_SESSION['email'] = $email;
+      $_SESSION['nome'] = $resultado[0]['nome'];
 
-      //header('location: ../../../web/pages/crud/home/html/index.html');
+      header('location: ../../web/pages/crud/home/html/index.html');
 } else {
       header('location: teste.php');
 };
+
 
 ?>

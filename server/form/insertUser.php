@@ -32,7 +32,9 @@ $sql = "INSERT INTO usuarios SET
 $status = $pdo->prepare($sql)->execute($row);
 
 if($status){
-      
+      session_start();
+      $_SESSION['logged'] = true;
+
       header('location: sucessoInsertUser.php');
 }else {
       echo "Erro no Insert do usuario";
