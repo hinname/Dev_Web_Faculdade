@@ -8,12 +8,12 @@
       <link type="text/css" rel="stylesheet" href="../css/formTorneio.css">
       <title>Cadastro torneios</title>
 </head>
-<body>
+<body onload="main()">
       <script src="../js/form.js"></script>
             <div class="interface">
                   <header>
                         <div class="navbar-brand">
-                              <a class="active" href="landingPage.html">Torneio de Games</a>
+                              <a class="active" href="../../../landingPage/html/">Torneio de Games</a>
                               <img src="../../../../assets/logo.png" width="200">
                         </div>
                         <ul class="navbar-options">
@@ -32,43 +32,26 @@
                               <h1>Inscrição Torneio</h1>
                         </div>
                         
-                        <form id="cadastro" action="mailto:heriveltonPRo@gmail.com" method="post" onchange="outputCheckbox()">
+                        <form id="cadastro" action="mailto:heriveltonPRo@gmail.com" method="post" onchange="outputSoma()">
                               <fieldset class="background">
                                     
                                     <div class="fields">
                                           Selecione o jogo que deseja participar (10 Reais) *: <br><br>
-                                          <div class="input">
+                                          <div class="input" id="radioGame">
                                                 
-                                                      <label for="gamerad1">League of Legends</label>
-                                                      <input type="radio" id="gamerad1" name="gamerad" class="radiogame" value="10" checked >
-
-                                                      <label for="gamerad2">FIFA</label>
-                                                      <input type="radio" id="gamerad2" name="gamerad" class="radiogame" value="10" >
-
-                                                      <label for="gamerad3">Street Fighter</label>
-                                                      <input type="radio" id="gamerad3" name="gamerad" class="radiogame" value="10" >
-                                                      
-                                                      <label for="gamerad4">Hearthstone</label>
-                                                      <input type="radio" id="gamerad4" name="gamerad" class="radiogame" value="10" > 
-                                                            
                                           </div>
+                                          (OPCIONAL) Você pode participar de torneios de outros jogos. Quais jogos deseja participar (além do já selecionado anteriormente)? <br><br>
                                           <div class="input-check">
-                                                (OPCIONAL) Você pode participar de torneios de outros jogos. Quais jogos deseja participar (além do já selecionado anteriormente)? <br><br>
+                                                
                                                 
                                                       <input type="checkbox" id="checkboxlol" class="gameselect" name="lol" value="10">
                                                             <label for="checkboxlol">League of Legends</label>
-                                                      <input type="checkbox" id="checkboxfifa" class="gameselect" name="fifa" value="10">
-                                                            <label for="checkboxfifa">FIFA</label>
-                                                      <input type="checkbox" id="checkboxsf" class="gameselect" name="sf" value="10">
-                                                            <label for="checkboxsf">Street Fighter</label>
-                                                      <input type="checkbox" id="checkboxhearthstone" class="gameselect" name="Hearthstone" value="10">
-                                                            <label for="checkboxhearthstone">Hearthstone</label>
                                           </div>
-										<div class="input-day" required>
+							<div class="input-day" required>
                                                 Selecione o dia que deseja participar* : 
                                                       <input type="radio" id="day" name="day" value="14" checked> 14/11/2020
                                                       <input type="radio" id="day" name="day" value="21"> 21/11/2020 
-													<input type="radio" id="day" name="day" value="28"> 28/11/2020
+									<input type="radio" id="day" name="day" value="28"> 28/11/2020
                                           </div>
       
       
