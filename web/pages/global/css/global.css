@@ -72,3 +72,21 @@ header img {
       background-color: #ba401b;
       margin-bottom: 0;
 }
+
+header .nav-button {
+      border: 0px;
+      padding: 0 12px;
+      margin: 0;
+      background-color: #333;
+      color: #f2f2f2;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      text-decoration: none;
+      overflow: hidden;
+      cursor: pointer;
+      font-size: 17px;
+}
+
+header .nav-button:hover {
+      color:#b8b8b8;
+}
