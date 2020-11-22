@@ -1,3 +1,17 @@
+<?php
+
+require_once('../../../../../server/acessoDB.php');
+
+
+$query = $pdo->prepare("SELECT table_name FROM information_schema.tables WHERE table_schema = 'torneio_games_web';");
+$query->execute();
+$resultado = $query->fetchAll();
+
+
+
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="pt_br">
@@ -16,28 +30,30 @@
       <header>
             <ul class="navbar-options">
                   <li class="nav-link">
-                        <button class="nav-button" id="logout" onclick="logout()" value="1" style="color:#000">Logout</button>
+                        <button class="nav-button" id="logout" onclick="logout()" value="1" style="color:#fff">Logout</button>
                   </li>
             </ul>
       </header>
 
       <center>
             <p id="nome">
-                  Olá ...
+                  Olá 
             </p>
       </center>
 
       <div class="content">
       <h2>Selecione a tabela: </h2>
             <fieldset class="background">
-            <form action="../../../../../server/suporte/listarCRUD.php" method="GET">
+            <form action="../../tabela/html/index.php" method="POST">
 
-                  <label for="radio1">Funcionario</label>
-                  <input type="radio" name="tabela" id="radio1" value="funcionarios" checked>
-                  <label for="radio1">Funcionario</label>
-                  <input type="radio" name="tabela" id="radio1" value="funcionarios">
-                  <label for="radio1">Funcionario</label>
-                  <input type="radio" name="tabela" id="radio1" value="funcionarios">
+                  <?php
+                        foreach($resultado as $tabela) {
+                              $c = 1;
+                              echo '<label for="radio'. $c .'">'. $tabela["table_name"] .'</label><input type="radio" name="tabela" id="radio'. $c .'" value="'. $tabela["table_name"] .'" checked> <br>';
+                              $c = $c + 1;
+                        }
+      
+                  ?>
                   <br>
                   <center><button type="submit">Mostrar tabela</button></center>
             </form>

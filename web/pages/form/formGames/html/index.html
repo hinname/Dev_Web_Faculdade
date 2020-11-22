@@ -7,9 +7,10 @@
       <link type="text/css" rel="stylesheet" href="../../formGlobal/formGlobal.css">
       <link type="text/css" rel="stylesheet" href="../css/formTorneio.css">
       <title>Cadastro torneios</title>
+      <script src="../js/form.js"></script>
 </head>
 <body onload="main()">
-      <script src="../js/form.js"></script>
+      
             <div class="interface">
                   <header>
                         <div class="navbar-brand">
@@ -32,7 +33,7 @@
                               <h1>Inscrição Torneio</h1>
                         </div>
                         
-                        <form id="cadastro" action="mailto:heriveltonPRo@gmail.com" method="post" onchange="outputSoma()">
+                        <form id="cadastro" action="../../formTorneio/page/index.php" method="post" onchange="loadForm()">
                               <fieldset class="background">
                                     
                                     <div class="fields">
@@ -40,28 +41,21 @@
                                           <div class="input" id="radioGame">
                                                 
                                           </div>
-                                          (OPCIONAL) Você pode participar de torneios de outros jogos. Quais jogos deseja participar (além do já selecionado anteriormente)? <br><br>
-                                          <div class="input-check">
+                                          <hr>
+                                          <p>(OPCIONAL) Você pode participar de torneios de outros jogos. Quais jogos deseja participar (além do já selecionado anteriormente)?</p> <br><br>
+                                          <div class="input-check" id="checkboxGame">
                                                 
-                                                
-                                                      <input type="checkbox" id="checkboxlol" class="gameselect" name="lol" value="10">
-                                                            <label for="checkboxlol">League of Legends</label>
                                           </div>
-							<div class="input-day" required>
-                                                Selecione o dia que deseja participar* : 
-                                                      <input type="radio" id="day" name="day" value="14" checked> 14/11/2020
-                                                      <input type="radio" id="day" name="day" value="21"> 21/11/2020 
-									<input type="radio" id="day" name="day" value="28"> 28/11/2020
-                                          </div>
-      
-      
+                                          
+                                          <hr>
+                                          
                                           <div class="input">
                                                 <span><p id="valfinal">Valor: R$ 10 </p></span> 
                                           </div>
                                           <div class="info">
                                                 * = campo obrigatório
                                           </div>
-                                                      <center><button class="btnSubmit" type="submit">Enviar</button></center>
+                                                      <center><button class="btnSubmit" type="submit">Continuar</button></center>
                                           
                                     </div>
                               </fieldset>

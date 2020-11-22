@@ -26,7 +26,7 @@ if ($resultadoF == 1) {
       $_SESSION['id'] = $resultado[0]['id'];
       $_SESSION['nome'] = $resultado[0]['nome'];
 
-      header('location: ../../web/pages/crud/home/html/index.html');
+      header('location: ../../web/pages/crud/home/html/index.php');
 } else {
       header('location: teste.php');
 };
