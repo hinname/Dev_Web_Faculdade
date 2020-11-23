@@ -5,10 +5,10 @@ require_once('../../../../../server/acessoDB.php');
 if(!defined('PDO::ATTR_DRIVER_NAME')) {
       echo "PDO não está disponivel. Ative no php.ini";
 }
+session_start();
+$nomeTabela = $_POST["tabela"];
 
-$nomeTabela = $_POST['tabela'];
-
-$_SESSION['tabela'] = $nomeTabela;
+$_SESSION["tabela"] = $nomeTabela;
 
 $sql = "SELECT * FROM $nomeTabela Order by id";
 $statement = $pdo->prepare($sql);

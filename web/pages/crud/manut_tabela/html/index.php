@@ -1,20 +1,41 @@
 <?php
 
+require_once('../../../../../server/acessoDB.php');
 session_start();
 
-$nomeTabela = $_SESSION['tabela'];
-$escolha = $_POST['escolha'];
+$nomeTabela = $_SESSION["tabela"];
+$escolha = $_POST["escolha"];
 if($escolha != 0){
       $id = $_POST["rd{$nomeTabela}"];
+      $_SESSION['id_tabela'] = $id;
+
+      if($escolha == 1) {
+            $titulo = "Alterar - {$nomeTabela}";
+            $button = '<center><button type="submit" name="escolha" value="1">Alterar</button></center>';
+      }else if($escolha == 2) {
+            $titulo = "Excluir - {$nomeTabela}";
+            header('location: ../../../../../server/suporte/manut_tabela.php');
+      }
+
+      $sql = "SELECT * FROM $nomeTabela WHERE id = {$id}";
+      $statement = $pdo->prepare($sql);
+      $statement->execute();
+      $linha = $statement->fetch();
+
+}else {
+
+      $titulo = "Inserir - {$nomeTabela}";
+      $button = '<center><button type="submit" name="escolha" value="0">Inserir</button></center>';
+
 }
 
-if($escolha == 0) {
-      $titulo = "Inserir - {$nomeTabela}";
-}else if($escolha == 1) {
-      $titulo = "Alterar - {$nomeTabela}";
-}else if($escolha == 2) {
-      $titulo = "Excluir - {$nomeTabela}";
-}
+$colums = "SHOW FIELDS FROM $nomeTabela FROM $dbname;";
+$query = $pdo->prepare($colums);
+$query->execute();
+$resultado = $query->fetchAll();
+
+
+
 
 ?>
 
@@ -41,40 +62,38 @@ if($escolha == 0) {
             </ul>
       </header>
       <div class = "content">
-            <form id="formTabela" action="../../manut_tabela/html/index.php" method="POST">
+            <form id="formCampo" action="../../../../../server/suporte/manut_tabela.php" method="POST">
             <fieldset class="background"> 
             <?php
-            echo "<table border=1>";
-
-            foreach($resultado as $columname){
-                  echo "<th>{$columname['Field']}</th>";
-            }
-
-            if($statement->rowCount()) {
-                  $cont=0;
-                  for($i = 0; $i < count($linhas); $i++){
-                        echo "<tr>";
-                        foreach($linhas[$i] as $linha){
-                              $cont += 1;
-                              if($cont == 1){
-                                    echo "<td><input type=radio name=rd{$nomeTabela} value={$linha} checked>{$linha}</td>";
-                              }else {
-                                    echo "<td>{$linha}</td>";
-                              }
+            if($escolha == 0) {
+                  $cont = 0;
+                  foreach ($resultado as $campo){
+                        $cont += 1;
+                        if($cont == 1){
+                              echo '<label for="' . $campo['Field'] . '">'. $campo['Field'] . '</label> <input type="text" name="'. $campo['Field'] . '" id="' . $campo['Field'] . '" disabled value="Id será inserido automaticamente"> ';
+                        }else{
+                              echo '<label for="' . $campo['Field'] . '">'. $campo['Field'] . '</label> <input type="text" name="'. $campo['Field'] . '" id="' . $campo['Field'] . '">';
                         }
-                        $cont=0;
-                        echo "</tr>";
+                        
                   }
-            } else if (!$statement->rowCount()) {
-                  echo "A tabela está vazia!";
+            } else if ($escolha == 1) {
+                  $cont = 0;
+                  foreach($resultado as $campo) {
+                        $field = $campo['Field'];
+                        if($cont == 0){
+                              echo '<label for="' . $campo['Field'] . '">'. $campo['Field'] . '</label> <input type="text" name="'. $campo['Field'] . '" id="' . $campo['Field'] . '" disabled value="'. $linha[$field] . '"> ';
+                        }else{
+                              echo '<label for="' . $campo['Field'] . '">'. $campo['Field'] . '</label> <input type="text" name="'. $campo['Field'] . '" id="' . $campo['Field'] . '" value="' . $linha[$field] . '">';
+                        }
+
+                        $cont += 1;
+                  }
             }
-            echo "</table>";
+            
+
+            echo"<br> <br>";
+            echo $button;
             ?>
-
-            <button type="submit" name="escolha" value="0">Inserir novo <?php echo "{$nomeTabela}" ?></button>
-            <button type="submit" name="escolha" value="1">Alterar um <?php echo "{$nomeTabela}" ?> </button>
-            <button type="submit" name="escolha" value="2">Excluir um <?php echo "{$nomeTabela}" ?></button>
-
             </form>
       </div>
 </body>
