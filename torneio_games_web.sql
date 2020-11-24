@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 21-Nov-2020 às 01:36
+-- Tempo de geração: 24-Nov-2020 às 01:37
 -- Versão do servidor: 10.4.14-MariaDB
 -- versão do PHP: 7.3.23
 
@@ -77,7 +77,8 @@ CREATE TABLE `funcionarios` (
 
 INSERT INTO `funcionarios` (`id`, `nome`, `email`, `senha`) VALUES
 (1, 'Herivelton Borges da Costa', 'herivelton.PRo@gmail.com', 'servidor'),
-(2, 'SUPORTE MASTER', 'suporte@suporte.com', 'servido');
+(2, 'SUPORTE MASTER', 'suporte@suporte.com', 'servido'),
+(3, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -258,13 +259,13 @@ ALTER TABLE `confrontos`
 -- AUTO_INCREMENT de tabela `desenvolvedora`
 --
 ALTER TABLE `desenvolvedora`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de tabela `funcionarios`
 --
 ALTER TABLE `funcionarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `jogos`
