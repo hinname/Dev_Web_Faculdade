@@ -2,8 +2,8 @@
 require_once('../acessoDB.php');
 session_start();
 
-$nomeTabela = $_SESSION["tabela"];
-$escolha = $_POST["escolha"];
+$nomeTabela = $_SESSION['tabela'];
+$escolha = $_POST['escolha'] ?? NULL;
 
 $colums = "SHOW FIELDS FROM $nomeTabela FROM $dbname;";
 $query = $pdo->prepare($colums);
@@ -13,57 +13,79 @@ $resultado = $query->fetchAll();
 
 
 if($escolha == 0){
+      $values = "";
       foreach($resultado as $linha){
 
             $campo = $linha['Field'];
 
             if($campo == 'id'){
-                  $value = NULL;
+                  $value = 'null';
             }else{
                   $value = $_POST[$campo];
             }
             
-            if(is_numeric($value)){
-
-                  $insert = "INSERT INTO {$nomeTabela} ({$campo}) VALUES ({$value});";
-                  $sql = $pdo->prepare($insert);
-                  $sql->execute();
+            if(is_numeric($value) || $value == 'null'){
+                  if($campo == 'id'){
+                        $values = $values . $value;
+                  }else{
+                        $values = $values . ", " . $value;
+                  }
             }else{
-                  $insert = " INSERT INTO {$nomeTabela} ({$campo}) VALUES ( ' " . $value . "  '); ";
-                  $sql = $pdo->prepare($insert);
-                  $sql->execute();
+                  $values = $values . ", '" . $value . "'";
             }
 
-            
-
       }
-      header('location: ../../web/pages/crud/tabela/html/index.php');
+
+      $insert = "INSERT INTO {$nomeTabela} VALUES ({$values})";
+      var_dump($insert);
+      $sql = $pdo->prepare($insert);
+      $sql->execute();
+      echo "<script>window.alert('Sucesso!!')</script>";
+      header('location: ../../web/pages/crud/home/html/index.php');
 
 }else if ($escolha == 1) {
       $id = $_SESSION['id_tabela'];
+      $cont = 0;
+      $updates = "";
       foreach($resultado as $linha){
             $campo = $linha['Field'];
             $value = $_POST[$campo];
 
-            if(is_numeric($value)){
-                  $update = "UPDATE {$nomeTabela} SET {$campo} = {$value} WHERE id={$id};";
-                  $sql = $pdo->prepare($update);
-                  $sql->execute();
-            }else {
-                  $update = "UPDATE {$nomeTabela} SET {$campo} = '" . $value . "' WHERE id={$id};";
-                  $sql = $pdo->prepare($update);
-                  $sql->execute();
-            }
-      }
-      header('location: ../../web/pages/crud/tabela/html/index.php');
+            if($campo == 'id'){
 
-}else if ($escolha == 3) {
+            }else {
+                  $cont += 1;
+                  if(is_numeric($value)){
+                        if($cont == 1){
+                              $updates = $updates . $campo . "=" . $value;
+                        }else {
+                              $updates = $updates . ", " . $campo . "=" . $value;
+                        }
+                        
+                  }else {
+                        if($cont == 1){
+                              $updates = $updates . $campo . "=" . "'".$value."'";
+                        }else {
+                              $updates = $updates . ", " . $campo . "=" . "'".$value."'";
+                        }
+                  }
+            }
+
+            
+      }
+      $update = "UPDATE {$nomeTabela} SET {$updates} WHERE id={$id};";
+      $sql = $pdo->prepare($update);
+      $sql->execute();
+      header('location: ../../web/pages/crud/home/html/index.php');
+
+}else if (isset($_SESSION['excluir_tabela']) && $_SESSION['excluir_tabela'] == TRUE) {
       $id = $_SESSION['id_tabela'];
 
       $delete = "DELETE FROM {$nomeTabela} WHERE id={$id}";
       $sql = $pdo->prepare($delete);
       $sql->execute();
-      header('location: ../../web/pages/crud/tabela/html/index.php');
+      $_SESSION['excluir_tabela'] == FALSE;
+      header('location: ../../web/pages/crud/home/html/index.php');
 }
 
 ?>

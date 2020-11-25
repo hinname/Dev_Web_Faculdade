@@ -14,6 +14,7 @@ if($escolha != 0){
             $button = '<center><button type="submit" name="escolha" value="1">Alterar</button></center>';
       }else if($escolha == 2) {
             $titulo = "Excluir - {$nomeTabela}";
+            $_SESSION['excluir_tabela'] = TRUE;
             header('location: ../../../../../server/suporte/manut_tabela.php');
       }
 

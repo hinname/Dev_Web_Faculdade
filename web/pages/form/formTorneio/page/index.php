@@ -83,7 +83,7 @@ if(isset($_POST['gameCheckbox'])) {
                                                       }
                                                       if(isset($gamelen)){
                                                             for($i = 0 ; $i < $gamelen; $i++) {
-                                                                  $query = $pdo->prepare("SELECT nome FROM jogos WHERE id = {$resultados[$i]['id_jogo']}");
+                                                                  $query = $pdo->prepare("SELECT nome FROM jogos WHERE id = {$resultados[$i]['id_jogo']}"); 
                                                                   $query->execute();
                                                                   $resultadosGames = $query->fetch();
                                                                   echo "<hr>";

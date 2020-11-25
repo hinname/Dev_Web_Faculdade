@@ -12,23 +12,5 @@
             <li><a href="web/pages/login/loginSuporte/html">Link para Login Suporte (CRUD site)</a></li>
       </ul>
 
-      <?php
-            //teste para listarCRUD.php
-            require_once('server/acessoDB.php');
-            $query = $pdo->prepare("SELECT id FROM funcionarios WHERE email='herivelton.PRo@gmail.com' && senha='servidor'");
-            $query->execute();
-            $resultado = $query->fetchAll();
-
-            $colums = "SHOW FIELDS FROM funcionarios FROM $dbname;";
-            $query = $pdo->prepare($colums);
-            $query->execute();
-            
-
-            $dale = $query->fetchAll();
-
-            echo "<pre>";
-            var_dump($dale[0]["Field"]);
-            echo "</pre>";
-      ?>
 </body>
 </html>
