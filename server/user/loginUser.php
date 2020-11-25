@@ -24,7 +24,7 @@ if ($resultadoF == 1) {
       
       $_SESSION['logged'] = true;
       $_SESSION['nome'] = $resultado[0]['nome'];
-      $_SESSION['id'] = $resultado[0]['id'];
+      $_SESSION['id_user'] = $resultado[0]['id'];
 
       header('location: ../../web/pages/loggedin/html/index.html');
 } else {

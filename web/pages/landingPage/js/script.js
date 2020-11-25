@@ -25,11 +25,11 @@ function checkSession() {
     if(req.readyState == 4 && req.status == 200) {
       var resposta = req.responseText;
   
-      if (resposta != 'não autorizado') {
-        window.location.replace("http://localhost/Dev_Web_Faculdade/web/pages/loggedin/html/");
-
-      }else {
+      if (resposta == 'não autorizado') {
         window.location.replace("http://localhost/Dev_Web_Faculdade/web/pages/login/loginUser/html/");
+
+      }else if(resposta == 'autorizado') {
+        window.location.replace("http://localhost/Dev_Web_Faculdade/web/pages/loggedin/html/");
       }
     }
   }

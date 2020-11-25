@@ -1,3 +1,19 @@
+<?php
+
+require_once('../../../../../server/acessoDB.php');
+session_start();
+
+
+$query = $pdo->prepare("SELECT * FROM jogos");
+$query->execute();
+$resultado = $query->fetchAll();
+
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -33,24 +49,35 @@
                               <h1>Inscrição Torneio</h1>
                         </div>
                         
-                        <form id="cadastro" action="../../formTorneio/page/index.php" method="post" onchange="loadForm()">
+                        <form id="cadastro" name="inscricaoTorneio" action="../../../../../server/user/insertTorneio.php" method="post" onchange="loadForm()">
                               <fieldset class="background">
                                     
                                     <div class="fields">
-                                          Selecione o jogo que deseja participar (10 Reais) *: <br><br>
-                                          <div class="input" id="radioGame">
-                                                
-                                          </div>
-                                          <hr>
-                                          <p>(OPCIONAL) Você pode participar de torneios de outros jogos. Quais jogos deseja participar (além do já selecionado anteriormente)?</p> <br><br>
-                                          <div class="input-check" id="checkboxGame">
-                                                
-                                          </div>
+                                          <?php
+                                                foreach($resultado as $game){
+                                                      echo "<div class='game' id='" . $game['id'] .  "'>";
+                                                      echo "<input type='checkbox' class='gameselect' name='" . $game['nome'] . "' id='jogo" . $game['id'] . "' value ='" . $game['id'] . "'>";
+                                                      echo "<label for='" . $game['id'] . "'>{$game['nome']}</label>";
+                                                      echo "<br>";
+                                                      echo "<div class='torneio' id='torneios" . $game['id'] . "'>";
+                                                      $sql = $pdo->prepare("SELECT * FROM torneios WHERE id_jogo={$game['id']}");
+                                                      $sql->execute();
+                                                      $torneios = $sql->fetchAll();
+                                                      foreach($torneios as $torneio) {
+                                                            echo "<input type='radio' name='torneio" . $game['id'] . "' id='torneio" . $torneio['id'] . "' value='" . $torneio['id'] . "'>";
+                                                            echo "<label for='" . $torneio['id'] . "'>{$torneio['nome']} --------- ({$torneio['data_inicio']} até {$torneio['data_termino']})</label>";
+                                                            echo "<br>";
+                                                      }
+                                                      echo "</div>";
+                                                      echo "</div>";
+                                                      echo "<hr>";
+                                                }
+
+                                          ?>
                                           
-                                          <hr>
                                           
                                           <div class="input">
-                                                <span><p id="valfinal">Valor: R$ 10 </p></span> 
+                                                <span><p id="valfinal">Valor: R$ 0 </p></span> 
                                           </div>
                                           <div class="info">
                                                 * = campo obrigatório

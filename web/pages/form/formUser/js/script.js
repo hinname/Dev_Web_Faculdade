@@ -39,7 +39,7 @@ function validatePass() {
     window.alert("Sua senha e confirmação de senha estão diferentes")
     cpassword.focus();
     return (false)
+  }else{
+    return (true)
   }
-
-  return (true)
 }

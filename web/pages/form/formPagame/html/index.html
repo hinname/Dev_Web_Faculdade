@@ -1,3 +1,5 @@
+<!--Essa página não funciona para efeitos práticos, a inscrição já foi confirmada na formGames. Essa página é apenas uma brincadeira-->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -33,7 +35,7 @@
                               
                         </div>
                         
-                        <form id="cadastro" action="mailto:heriveltonPRo@gmail.com" method="post" onchange="inputChange()">
+                        <form id="cadastro" action="../../../../../server/user/pagamento.php" method="post" onchange="inputChange()">
                               <fieldset class="background">
                                     
                                     <div class="fields">
@@ -54,7 +56,7 @@
                                                             id="numCard" 
                                                             name="numCard"  
                                                             maxlength="16" 
-                                                            required autofocus>
+                                                            autofocus>
                                                 </div>
                                                 <div class="input">
                                                       <label for="name">Nome impresso no cartão : </label>
@@ -63,7 +65,7 @@
                                                             id="nameCard" 
                                                             name="nameCard"  
                                                             maxlength="100" 
-                                                            required autofocus>
+                                                            autofocus>
                                                 </div>
                                                 <div class="input">
                                                       <label for="datvenc"> Validade : </label>
@@ -76,7 +78,7 @@
                                                             id="codSeg" 
                                                             name="codSeg" 
                                                             maxlength="3" 
-                                                            required autofocus>
+                                                            autofocus>
                                                 </div>
                                           </div>
                                                       <center><button class="btnSubmit" type="submit">Confirmar</button></center>

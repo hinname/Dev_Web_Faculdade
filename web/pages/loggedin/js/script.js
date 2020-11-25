@@ -48,7 +48,7 @@ function showContent() {
 
   req.onreadystatechange = function() {
     if(req.readyState == 1) {
-        document.getElementById('container').innerHTML = 'Buscando nome...';
+        document.getElementById('inscricao').innerHTML = 'Buscando dados';
     }
     if(req.readyState == 4 && req.status == 200) {
     var resposta = req.responseText;
