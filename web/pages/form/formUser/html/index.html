@@ -7,6 +7,7 @@
       <link type="text/css" rel="stylesheet" href="../../formGlobal/formGlobal.css">
       <link type="text/css" rel="stylesheet" href="../../formGlobal/formUser.css">
       <title>Cadastro usuário"</title>
+      <script src="../js/script.js"></script>
 </head>
 <body>
             <div class="interface">
@@ -24,7 +25,7 @@
                               </li>
                         </ul>
 
-                        <script src="../js/script.js"></script>
+                        
                         
                   </header>
 
@@ -34,7 +35,7 @@
                               
                         </div>
                         
-                        <form id="cadastro" onsubmit="return isValidForm()" action="../../../../../server/user/insertUser.php" method="post">
+                        <form id="cadastro"  action="../../../../../server/user/insertUser.php" method="post" onsubmit="return isValidForm(this)">
                               <fieldset class="background">
                                     
                                     <div class="fields">
@@ -51,8 +52,8 @@
                                           </div>
                                           <div class="input">
                                                 Sexo* : 
-                                                      <input type="radio" id="gender" name="gender" value="M" checked> Masculino
-                                                      <input type="radio" id="gender" name="gender" value="F"> Feminino 
+                                                      <input type="radio" id="genderM" name="gender" value="M" checked> Masculino
+                                                      <input type="radio" id="genderF" name="gender" value="F"> Feminino 
                                           </div>
                                           <div class="input">
                                                 <label for="User"> Data nascimento* : </label>
@@ -63,7 +64,7 @@
                                                 <input type="email" id="email" name="email" required autofocus placeholder="Nome@email.com">
                                           </div>
                                           <div class="input">
-                                                <label for="contact"> Telefone: </label>
+                                                <label for="contact"> Telefone celular: </label>
                                                 <input type="tel" id="telefone" name="telefone" pattern="[0-9]{2}[0-9]{5}[0-9]{4}" placeholder="Ex:44123456789" >
                                           </div>
                                           <div class="input">

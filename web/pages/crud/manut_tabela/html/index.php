@@ -5,6 +5,7 @@ session_start();
 
 $nomeTabela = $_SESSION["tabela"];
 $escolha = $_POST["escolha"];
+$id_func = $_SESSION['id_func'];
 if($escolha != 0){
       $id = $_POST["rd{$nomeTabela}"];
       $_SESSION['id_tabela'] = $id;
@@ -73,7 +74,12 @@ $resultado = $query->fetchAll();
                         if($cont == 1){
                               echo '<label for="' . $campo['Field'] . '">'. $campo['Field'] . '</label> <input type="text" name="'. $campo['Field'] . '" id="' . $campo['Field'] . '" disabled value="Id será inserido automaticamente"> ';
                         }else{
-                              echo '<label for="' . $campo['Field'] . '">'. $campo['Field'] . '</label> <input type="text" name="'. $campo['Field'] . '" id="' . $campo['Field'] . '">';
+                              if($campo['Field'] == 'id_func') {
+                                    echo '<label for="' . $campo['Field'] . '">'. $campo['Field'] . '</label> <input type="text" name="'. $campo['Field'] . '" id="' . $campo['Field'] . '" value="' . $id_func . '" disabled>';
+                              }else{
+                                    echo '<label for="' . $campo['Field'] . '">'. $campo['Field'] . '</label> <input type="text" name="'. $campo['Field'] . '" id="' . $campo['Field'] . '">';
+                              }
+                              
                         }
                         
                   }

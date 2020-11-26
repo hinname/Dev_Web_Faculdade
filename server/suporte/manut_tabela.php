@@ -12,6 +12,7 @@ $resultado = $query->fetchAll();
 
 
 
+
 if($escolha == 0){
       $values = "";
       foreach($resultado as $linha){
