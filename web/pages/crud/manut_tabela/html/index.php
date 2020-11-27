@@ -12,7 +12,8 @@ if($escolha != 0){
 
       if($escolha == 1) {
             $titulo = "Alterar - {$nomeTabela}";
-            $button = '<center><button type="submit" name="escolha" value="1">Alterar</button></center>';
+            $button = '<center><button type="submit" name="definicao" value="1">Alterar</button></center>';
+
       }else if($escolha == 2) {
             $titulo = "Excluir - {$nomeTabela}";
             $_SESSION['excluir_tabela'] = TRUE;
@@ -27,7 +28,7 @@ if($escolha != 0){
 }else {
 
       $titulo = "Inserir - {$nomeTabela}";
-      $button = '<center><button type="submit" name="escolha" value="0">Inserir</button></center>';
+      $button = '<center><button type="submit" name="definicao" value="0">Inserir</button></center>';
 
 }
 
