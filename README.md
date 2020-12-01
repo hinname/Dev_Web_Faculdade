@@ -22,8 +22,10 @@ Projeto da faculdade para disciplina DESENV. WEB com HTML5, CSS, JS e PHP
 - Clique no botão "Admin" na opção do MySQL
 
 ### 4) Passo: Importe o arquivo SQL no MySQL
-- Assim que o proejto foi baixado, um arquivo chamado **torneio_games_web.SQL** estará na pasta
-- No phpMyAdmin, Clique na aba "**Importar**"
+- Assim que o projeto foi baixado, um arquivo chamado **torneio_games_web.SQL** estará na pasta
+- No phpMyAdmin, Crie uma nova Base de dados com o nome **torneio_games_web**
+- Clique na base de dados criada
+- Clique na aba "**Importar**"
 - Selecione o arquivo **torneio_games_web.SQL** para ser importado
 - Clique em executar
 
